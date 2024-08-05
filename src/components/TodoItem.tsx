@@ -1,6 +1,20 @@
 import { Checkbox, CloseButton, HStack, Text } from "@chakra-ui/react";
+import { Todo } from "../types/general.types"; // Убедитесь, что этот импорт корректен
 
-const TodoItem = ({ id, title, completed, onToggle, onDelete }) => {
+interface TodoItemProps extends Todo {
+  onToggle: (options: {
+    variables: { id: number, completed: boolean },
+  }) => void;
+  onDelete: (options: { variables: { id: number } }) => void;
+}
+
+const TodoItem: React.FC<TodoItemProps> = ({
+  id,
+  title,
+  completed,
+  onToggle,
+  onDelete,
+}) => {
   return (
     <HStack spacing={3}>
       <Checkbox
@@ -27,4 +41,5 @@ const TodoItem = ({ id, title, completed, onToggle, onDelete }) => {
     </HStack>
   );
 };
+
 export default TodoItem;

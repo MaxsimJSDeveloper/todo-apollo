@@ -1,16 +1,26 @@
 module.exports = {
   todos: [
     {
-      id: "1",
+      id: 1,
       title: "First Todo",
-      description: "This is the first todo item",
       completed: false,
+      userId: 101,
     },
     {
-      id: "2",
+      id: 2,
       title: "Second Todo",
-      description: "This is the second todo item",
       completed: true,
+      userId: 101,
+    },
+  ],
+  users: [
+    {
+      id: 101,
+      name: "Max",
+    },
+    {
+      id: 102,
+      name: "Den",
     },
   ],
 };

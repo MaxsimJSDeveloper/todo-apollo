@@ -13,6 +13,7 @@ export const ALL_TODO = gql`
 export const ADD_TODO = gql`
   mutation AddTodo($title: String!, $userId: Int!, $completed: Boolean!) {
     newTodo: createTodo(title: $title, userId: $userId, completed: $completed) {
+      id
       userId
       title
       completed
