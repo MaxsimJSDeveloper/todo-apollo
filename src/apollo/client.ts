@@ -4,8 +4,12 @@ import {
   NormalizedCacheObject,
 } from "@apollo/client";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
-  uri: "http://localhost:3000",
+  uri: isProduction
+    ? process.env.REACT_APP_GRAPHQL_URI
+    : "http://localhost:3000/graphql",
   cache: new InMemoryCache(),
 });
 
