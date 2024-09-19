@@ -1,9 +1,9 @@
 import { Checkbox, CloseButton, HStack, Text } from "@chakra-ui/react";
-import { Todo } from "../types/general.types"; // Убедитесь, что этот импорт корректен
+import { Todo } from "../types/general.types";
 
 interface TodoItemProps extends Todo {
   onToggle: (options: {
-    variables: { id: number, completed: boolean },
+    variables: { id: number; completed: boolean };
   }) => void;
   onDelete: (options: { variables: { id: number } }) => void;
 }

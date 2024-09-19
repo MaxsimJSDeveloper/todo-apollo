@@ -24,7 +24,6 @@ const TodoList = () => {
 
         const removedTodoId = deleteData.removeTodo.id;
 
-        // Явное обновление кеша
         cache.writeQuery({
           query: ALL_TODO,
           data: {
