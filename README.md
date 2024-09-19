@@ -12,7 +12,7 @@ A simple Todo application built with React, TypeScript, and Apollo Client, utili
 
 ## Installation
 
-To install the project locally, follow these steps:
+For install the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
